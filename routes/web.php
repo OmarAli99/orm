@@ -11,6 +11,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     
-    $users = User::cursor();
-    return view('welcome', compact('users')); 
+    // $result = User::find(1)->delete();
+
+
+   // $users=User::onlyTrashed()->find(1)->restore();
+   $users=User::onlyTrashed()->find(1)->forceDelete();
+
+  //dd( $users);
+
+
+    //return view('welcome', compact('users')); 
 });
+ 

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('wallet')->default(0);
             $table->integer('wallet2')->default(0);
             $table->rememberToken();
-            $table->SoftDeletes();
+            $table->softDeletes();
             $table->timestamps();
         });
 
